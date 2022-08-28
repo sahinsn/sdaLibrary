@@ -6,9 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "registry": "npm login - scope=@sahinsn - registry=https://npm.pkg.github.com",
+    "packAndpublish": "ng build && cd /dist/components-lib/ && npm pack && npm publish"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^14.0.0-next.0",
     "@angular/common": "^14.0.0-next.0",
@@ -23,6 +24,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "^14.2.1",
     "@angular/cli": "~14.2.0",
     "@angular/compiler-cli": "^14.0.0-next.0",
     "@types/jasmine": "~4.0.0",
@@ -32,6 +34,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "ng-packagr": "^14.2.0",
     "typescript": "~4.7.2"
   }
 }
